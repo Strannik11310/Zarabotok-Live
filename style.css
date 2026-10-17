@@ -1,0 +1,401 @@
+/*
+Theme Name: Zarabotok Live Авторская
+Theme URI: https://zarabotoklive.ru
+Author: Strannik / Aleksandr
+Description: Чистая и быстрая уникальная тема, сверстанная вручную.
+Version: 1.0
+*/
+
+/* Главная белая пелена на весь экран */
+.preloader {
+    position: fixed;
+    /* Фиксируем намертво поверх всего сайта */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Растягиваем на всю ширину */
+    height: 100vh;
+    /* Растягиваем на всю высоту экрана */
+    background-color: #ffffff;
+    /* Тот самый чистый белый фон */
+    z-index: 9999;
+    /* Поднимаем на самый верхний слой, чтобы перекрыть шапку */
+
+    /* Центрируем прыгающие точки строго посередине экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Сами прыгающие точки (оставляем, как было) */
+.page-loader {
+    display: flex;
+    gap: 8px;
+}
+
+.page-loader__dot {
+    width: 12px;
+    height: 12px;
+    background-color: #10b981;
+    border-radius: 50%;
+    animation: loader-bounce 0.6s infinite alternate;
+}
+
+.page-loader__dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.page-loader__dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loader-bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+
+
+
+p {
+    color: #666666;
+}
+
+.hrefpodpisivatsa {
+    color: #10b981;
+    text-decoration: none;
+}
+
+/* Настройки для самой шапки (контейнера) */
+.shapka {
+    display: flex;
+    /* Выстраивает элементы в одну строку */
+    justify-content: space-between;
+    /* Расталкивает текст влево, а кнопку вправо */
+    align-items: center;
+    /* Выравнивает их ровно по центру высоты */
+    padding: 1px 20px;
+    /* Внутренние отступы, чтобы элементы не прилипали к краям экрана */
+    background-color: #ffffff;
+    /* Белый фон для всей шапки */
+
+    /* Вот она — та самая тонкая серая линия под шапкой */
+    border-bottom: 1.5px solid #e0e0e0;
+}
+
+
+
+/* Настройки для текста заголовка */
+.zagol a {
+    font-size: 20px;
+    margin: 0;
+    color: 1a1a1a;
+    text-decoration: none;
+    /* Обнуляем встроенные отступы браузера, чтобы они не ломали строку */
+}
+
+/* Новый контейнер для двух правых кнопок */
+.shapka__actions {
+    display: flex;
+    align-items: center;
+    /* Выравниваем солнышко и полоски ровно по центру высоты */
+    gap: 15px;
+    /* Расстояние между солнышком и бургером */
+}
+
+/* Стили для кнопки переключения темы */
+.theme-toggle {
+    background: none;
+    /* Убираем стандартный фон */
+    border: none;
+    /* Убираем рамку */
+    padding: 5px;
+    /* Область для удобного клика пальцем */
+    cursor: pointer;
+    /* Палец при наведении */
+    color: #333333;
+    /* Цвет иконки солнышка */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+
+/* Эффект при наведении */
+.theme-toggle:hover {
+    opacity: 0.7;
+    /* Солнце слегка бледнеет при наведении */
+}
+
+
+/* Настройки для кнопки-бургера */
+.burger-menu {
+    background: none;
+    /* Убираем серый фон кнопки */
+    border: none;
+    /* Убираем рамку кнопки */
+    padding: 5px;
+    /* Делаем область клика чуть больше */
+    cursor: pointer;
+    /* Курсор при наведении */
+    color: #333333;
+    /* Цвет полосок */
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+/* Контейнер для всего главного блока */
+.hero-section {
+    max-width: 690px;
+    margin: 40px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Надзаголовок со звездочкой */
+.hero-subtitle {
+    font-size: 13px;          /* Делаем шрифт аккуратным и мелким */
+    font-weight: 600;         /* Средняя плотность (Medium / Semi-Bold) */
+    color: #10b981;           /* Приглушенный серый цвет текста */
+    text-transform: uppercase; /* Автоматически делает все буквы БОЛЬШИМИ */
+    letter-spacing: 0.5px;    /* Небольшое расстояние между буквами для читаемости */
+    margin-bottom: 16px;      /* Отступ вниз до большого заголовка H1 */
+    
+    /* Флексбокс, чтобы звездочка и текст стояли идеально ровно на одной линии */
+    display: flex;
+    align-items: center;
+    gap: 6px;                 /* Расстояние между звездочкой и текстом */
+}
+
+/* Стили для самой звездочки */
+.subtitle-icon {
+    color: ##10b981;           /* Делаем звездочку чуть светлее текста, как на макете */
+    font-size: 14px;          /* Корректируем её размер */
+    display: inline-block;
+}
+
+/* Главный заголовок H1 */
+.hero-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
+}
+
+/* Описание */
+.hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 28px;
+}
+
+/* Контейнер кнопок */
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+/* Общие стили для кнопок */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* Зеленая главная кнопка */
+.btn-primary {
+    background-color: #10b981;
+    color: #ffffff;
+}
+.btn-primary:hover {
+    background-color: #059669;
+}
+
+/* Светлая кнопка "Темы блога" */
+.btn-secondary {
+    background-color: #f1f5f9;
+    color: #334155;
+}
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+}
+
+
+
+
+/* Общий контейнер сетки */
+.main-articles-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* На мобильных: 1 колонка */
+    gap: 24px;                  /* Расстояние между карточками */
+    max-width: 690px;
+    margin: 40px auto;
+}
+
+/* На планшетах и ПК перестраиваем в 2 или 3 колонки (в зависимости от ширины экрана) */
+@media (min-width: 640px) {
+    .main-articles-grid {
+        grid-template-columns: repeat(2, 1fr); /* На планшетах 2 в ряд */
+    }
+}
+
+@media (min-width: 840px) {
+    .main-articles-grid {
+        grid-template-columns: repeat(3, 1fr); /* На ПК 3 в ряд */
+    }
+}
+
+/* Стили для маленькой карточки-ссылки */
+.grid-article-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none; /* Убираем подчеркивание, как мы только что выучили! */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid-article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Картинка внутри карточки */
+.grid-article-image-box {
+    width: 100%;
+    height: 150px; /* Делаем картинки пониже, чтобы карточка была компактной */
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+.grid-article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Текстовая зона */
+.grid-article-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Маленькие теги категорий */
+.grid-badge-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 12px;
+    align-self: flex-start;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Разные цвета для разных тегов (для красоты) */
+.tag-invest { background-color: #e0f2fe; color: #0369a1; } /* Синий */
+.tag-texts { background-color: #fef3c7; color: #b45309; }  /* Желтый */
+.tag-work { background-color: #dcfce7; color: #15803d; }   /* Зеленый */
+
+/* Заголовок маленькой статьи */
+.grid-article-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin: 0 0 12px 0;
+    flex-grow: 1; /* Выталкивает дату вниз */
+}
+
+/* Дата под статьей */
+.grid-article-date {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+
+
+
+
+/* Стили для подвала (Футера) */
+.site-footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-top: 1.1px solid #999999;
+}
+
+.site-footer p {
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+СТИЛИ ДЛЯ ПК И БОЛЬШИХ ЭКРАНОВ (от 992px)
+========================================== */
+@media (min-width: 992px) {
+
+/* 1. Изменяем ширину основного контента на 90% */
+.main {
+width: 90%;
+max-width: 1200px;
+/* Хорошая практика — ставить лимит, чтобы на ультрашироких мониторах текст не растягивался бесконечно */
+margin: 0 auto;
+/* Центрируем main по горизонтали */
+}
+
+/* 2. Превращаем скрытое мобильное меню в раскрытое горизонтальное */
+.menu-nav {
+display: flex;
+/* Показываем меню */
+flex-direction: row;
+/* Выстраиваем пункты горизонтально в линию */
+justify-content: space-between;
+/* Равномерно распределяем пункты */
+
+/* Сбрасываем мобильные абсолютные позиционирования, если они были */
+position: static;
+background: transparent;
+}
+
+/* Скрываем кнопку мобильного «бургера», так как на ПК она больше не нужна */
+.burger-button {
+display: none;
+}
+}

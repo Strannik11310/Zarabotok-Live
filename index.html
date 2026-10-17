@@ -1,0 +1,138 @@
+<!-- Theme Name: Zarabotok Live Авторская
+Theme URI: https://zarabotoklive.ru
+Author: Strannik / Aleksandr
+Description: Чистая и быстрая уникальная тема, сверстанная вручную.
+Version: 1.0 -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarabotoklive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Настоящий экран загрузки на всю страницу -->
+    <div class="preloader">
+        <div class="page-loader">
+            <div class="page-loader__dot"></div>
+            <div class="page-loader__dot"></div>
+            <div class="page-loader__dot"></div>
+        </div>
+    </div>
+
+    <!-- Дальше идет ваш обычный скелет сайта -->
+    <header class="shapka">
+        <h1 class="zagol"><a href="https://zarabotoklive.ru">Заработок Live</a></h1>
+        <div class="shapka__actions">
+            <!-- Кнопка переключения темы (Иконка Солнышка) -->
+            <button class="theme-toggle" aria-label="Переключить тему">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" />
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <!-- Кнопка-бургер -->
+            <button class="burger-menu" aria-label="Открыть меню">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                    <!-- Верхняя линия -->
+                    <path d="M4 6H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <!-- Средняя линия -->
+                    <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <!-- Нижняя линия -->
+                    <path d="M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Главный приветственный блок (Hero section) -->
+        <section class="hero-section">
+
+            <!-- Тот самый надзаголовок со звездочкой -->
+            <p class="hero-subtitle">
+                <span class="subtitle-icon">✦</span> БЛОГ О СПОСОБАХ ЗАРАБОТКА
+            </p>
+
+            <!-- Главный заголовок H1 -->
+            <h1 class="hero-title">Зарабатываем вместе</h1>
+
+            <!-- Лид-абзац (описание) -->
+            <p class="hero-description">
+                Реальные способы заработка в интернете. Обзор популярных методов дохода, бизнес-идеи, удаленная работа, методы монетизации сайтов, соцсетей, в том числе варианты заработка без вложений, новости в предпринимательской сфере.<br>
+                Не забывайте <a href="https://vk.ru/Zarabotokliveru" class="hrefpodpisivatsa">подписываться</a>, чтобы не пропустить новые варианты заработка в интернете!
+            </p>
+
+            <!-- Блок с кнопками -->
+            <div class="hero-actions">
+                <a href="#" class="btn btn-primary">Читать свежую статью →</a>
+                <a href="#" class="btn btn-secondary">Темы блога</a>
+            </div>
+
+        </section>
+
+        <!-- Контейнер для сетки второстепенных статей -->
+        <div class="main-articles-grid">
+
+            <!-- Карточка статьи 1 -->
+            <a href="post-1.html" class="grid-article-card">
+                <div class="grid-article-image-box">
+                    <img src="article-thumb-1.jpg" alt="Инвестиции для начинающих" class="grid-article-image">
+                </div>
+                <div class="grid-article-content">
+                    <span class="grid-badge-tag tag-invest">Инвестиции</span>
+                    <h3 class="grid-article-title">Пассивный доход: 3 простых инструмента, доступных каждому</h3>
+                    <span class="grid-article-date">12 октября 2026</span>
+                </div>
+            </a>
+
+            <!-- Карточка статьи 2 -->
+            <a href="post-2.html" class="grid-article-card">
+                <div class="grid-article-image-box">
+                    <img src="article-thumb-2.jpg" alt="Копирайтинг и тексты" class="grid-article-image">
+                </div>
+                <div class="grid-article-content">
+                    <span class="grid-badge-tag tag-texts">Копирайтинг</span>
+                    <h3 class="grid-article-title">Как писать тексты, за которые платят: пошаговый разбор для новичка</h3>
+                    <span class="grid-article-date">10 октября 2026</span>
+                </div>
+            </a>
+
+            <!-- Карточка статьи 3 -->
+            <a href="post-3.html" class="grid-article-card">
+                <div class="grid-article-image-box">
+                    <img src="article-thumb-3.jpg" alt="Удаленная работа" class="grid-article-image">
+                </div>
+                <div class="grid-article-content">
+                    <span class="grid-badge-tag tag-work">Удаленка</span>
+                    <h3 class="grid-article-title">Организация рабочего дня дома: как не выгореть и всё успевать</h3>
+                    <span class="grid-article-date">08 октября 2026</span>
+                </div>
+            </a>
+
+        </div>
+
+
+    </main>
+
+    <!-- Футер сайта (низ страницы) -->
+    <footer class="site-footer">
+        <p>
+            © 2026 Заработок Live. Все права защищены.
+        </p>
+    </footer>
+
+    <!-- СКРИПТЫ (Всегда подключаются в самом низу перед закрытием body) -->
+    <script src="script.js"></script>
+
+
+</body>
+</html>
